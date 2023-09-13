@@ -1,0 +1,14 @@
+.Button {
+  cursor: pointer;
+}
+.clear {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  fill: rgb(74, 198, 209);
+
+  :hover {
+    fill: rgb(95, 19, 66);
+  }
+}
