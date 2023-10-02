@@ -1,6 +1,4 @@
 import webpack from "webpack";
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
 import { BuildOptions } from "./types/config";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
@@ -17,14 +15,14 @@ export function buildWebpackConfig(
     output: {
       filename: "[name].[contenthash].js",
       path: paths.build,
-      clean: true,
+      clean: true
     },
     plugins: buildPlugins(options),
     module: {
-      rules: buildLoaders(options),
+      rules: buildLoaders(options)
     },
     resolve: buildResolvers(options),
     devtool: isDev ? "inline-source-map" : undefined,
-    devServer: isDev ? buildDevServer(options) : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined
   };
 }

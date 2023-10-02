@@ -10,11 +10,11 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    debug: __IS_DEV__ ? true : false,
+    debug: !!__IS_DEV__,
 
     interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    },
+      escapeValue: false // not needed for react as it escapes by default
+    }
   });
 
 export default i18n;
